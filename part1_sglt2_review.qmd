@@ -14,10 +14,12 @@ focus on investigated mediators
 
 ## Sodium glucose co-transporter 2 as the perfect drug target
 
-SGLT2-inhibitors were developed as treatment for type 2 diabetes mellitus. The idea behind was simple and obvious: if there is a problem of excess glucose in bloodstream, it can be potentially be solved by increasing the loss of glucose in the kidneys. Sodium glucose co-transporter 2, the main driver for glucose reabsorption in the proximal tubule of the nephron, was the ideal target since the transporter is responsible for 99%(ref) of glucose reuptake following the primary filtration in the glomerulus. Early studies of SGLT2 physiology were conducted well before the actual discovery of SGLT2. In 1835, phlorizin - a naturally occuring phenol glucoside and SGLT2-inhibitor - was first isolated from apple tree bark[@koninck1836], and studies in the 1880s showed that the administration of this isolate caused renal glucosuria[@jÃ¶rgens2020]. It was, however, not until the 1980s that studies of phlorizin as a blocker of renal tubular glucose reabsorption gained traction[@starke1985; @rossetti1987], and that the connection to the phlorizin-like phenotype of familial renal glucosuria was found to be caused by genetic variation in the gene encoding SGLT2 (ref).\
+SGLT2-inhibitors were developed as treatment for type 2 diabetes mellitus. The idea behind was simple and obvious: if there is a problem of excess glucose in bloodstream, it can be potentially be solved by increasing the loss of glucose in the kidneys. Sodium glucose co-transporter 2, the main driver for glucose reabsorption in the proximal tubule of the nephron, was the ideal target since the transporter is responsible for 99%(ref) of glucose reuptake following the primary filtration in the glomerulus @fig-1. Early studies of SGLT2 physiology were conducted well before the actual discovery of SGLT2. In 1835, phlorizin - a naturally occuring phenol glucoside and SGLT2-inhibitor - was first isolated from apple tree bark[@koninck1836], and studies in the 1880s showed that the administration of this isolate caused renal glucosuria[@jÃ¶rgens2020]. It was, however, not until the 1980s that studies of phlorizin as a blocker of renal tubular glucose reabsorption gained traction[@starke1985; @rossetti1987], and that the connection to the phlorizin-like phenotype of familial renal glucosuria was found to be caused by genetic variation in the gene encoding SGLT2 (ref).\
 The first SGLT2-inhibitors or gliflozins went on the market in the early 2010s as novel oral antidiabetic treatment options, shown to reduce plasma glucose and weight (reference). Then, when results from large scale cardiovascular outcome trials, came out a few years later, type 2 diabetes mellitus treatment suddenly faced a shift in treatment paradigm: Up until 2015, treatment for type 2 diabetes had mainly been focused on lowering plasma glucose and improving lifestyle, but the results of the EMPA-REG OUTCOME trial revealed the potential of pharmacologically reducing cardiovascular risk along with risk of mortality. The EMPA-REG OUTCOME group found a 35% (95%CI: 15-50) lower risk of hospitalization for heart failure, a 38% (23-51) lower risk of cadiovascular mortality, and a 32% (18-43) lower risk of all-cause mortality for empagliflozin compared to placebo[@empaglif]. In the following years, the effects were also found in other SGLT2-inhibitor types[@dapaglif; @canaglif; @cardiova] (META-figur af de store studier) and it became evident that this not only had the potential to change diabetes treatment, but also to prevent cardiovascular outcomes in other at-risk populations[@petrie2020; @bays2014; @packer2020]. As a consequence, SGLT2-inhibitors Empagliflozin and Dapagliflozin are now included as class 1 recommended treatments for heart failure with reduced ejection fraction in individuals without diabetes in both European and American guidelines[@authors/taskforcemembers:2022; @heidenreich2022].
 
 Although several processes that may lead to cardiovascular disease are impacted by the metabolic changes that characterize type 2 diabetes, only hyperglycemia, dyslipidemia, hypertension, obesity, and sex will be described in this review to provide a framework for examining the relationship between SGLT2-inhibition and cardiovascular disease. Likewise, the mechanistic considerations for the effect of SGLT2-inhibitors on cardiovascular disease and mortality will be the most thorough for potential mechanisms explored in the two original studies included in the thesis.
+
+![SGLT2 is located on the luminal side of the tubule cells in the proximal tubule of the nephron in the kidney. Glucose enters the cell in Na^+ -coupled transport driven by the Na^+ gradient created by the Na^+/K^+-ATPase on the interstitial side. Glucose leaves the cell largely through GLUT2 and diffuses passively to the peritubular vessel. SGLT2 is responsible for ~ 90% of glucose reabsorption and the kidney. Image created with BioRender.](sglt2.png){#fig-1}
 
 ## Cardiovascular disease in a metabolic framework
 
@@ -54,29 +56,26 @@ the elusive nature of cardiovascular risk in diabetes
 
 risk of hf, mi, ihd, ascvd, death
 
-## Understanding risk factors for cardiovascular disease and type 2 diabetes as an exacerbating factor
+## Understanding risk factors for cardiovascular disease, type 2 diabetes as an exacerbating factor, and potential mechanisms for SGLT2-inhibitors
 
 ### Glucose
 
 Historical context
 
 The relationship between plasma glucose and cardiovascular risk is undeniable. The increased risk of cardiovascular disease in the general population begins even within the normal plasma glucose range (spline glucose and hba1c ukb?). Mendelian randomization studies have established the causal relationship between higher plasma glucose and risk of myocardial infarction[@emanuelsson2020; @benn2012], free from limitations such as reverse causation which can be an issue in observational analyses.\
-Hyperglycemia pathophysiology in type 2 diabetes involves insulin resistance in muscle and liver tissue, impaired beta-cell glucose sensitivity, and an increased insulin secretion, creating a sequence of reciprocal cause and effect which intensifies and aggravates the high glucose level and its negative effects.
-
-Hyperglycemia promotes atherosclerosis by acting on several levels of the atherosclerotic process; i.e. endothelial function, metabolic pathways, inflammation, fibrous cap formation, and thrombosis.
-
-by facilitating leucocyte adhesion to endothelial cells and by impairing endothelial function via inhibition of nitric oxide production and an increase in endothelin-1, E-selectin, VCAM-1, ICAM-1, reactive oxygen species, angiotensin II, and plasminogen activator inhibitor 1 levels. Both hyperglycemia and hyperinsulinemia induced by high levels of free fatty acids leads to a higher production of super-oxide in the endothelium and thereby inflammation and impairment of the endothelial function[@insulin] (omformuleres og flere refs).
-
-However, because it is the main diagnostic criterium, treating physicians can be prone to lose sight of the multi-organ nature of the disease.
-
-What role do glucose lowering drugs play in changing the risk profile?
-
-Additionally, pharmaceutical glucose-lowering has been shown to reduce cardiovascular risk[@ghosh-swaby2020], though the effects vary across drug type. Glucose-lowering drugs with similar glucose-lowering properties, however, do not affect cardiovascular risk equally.
+Hyperglycemia pathophysiology in type 2 diabetes involves insulin resistance in muscle and liver tissue, impaired beta-cell glucose sensitivity, and an increased insulin secretion, creating a sequence of reciprocal cause and effect which intensifies and aggravates the high glucose level and its negative effects. Hyperglycemia promotes atherosclerosis by acting on several levels of the atherosclerotic process; i.e. endothelial function, metabolic pathways, inflammation, fibrous cap formation, and thrombosis[@insulin], and may explain part of the increased risk of cardiovascular disease in diabetes.
 
 #### Renin angiotensin system and glycemic control
 
 Further illustrating the interlaced mechanisms and complicated cause and effect relationships between hyperglycemia or type 2 diabetes and heart failure, studies have shown that angiotensin II receptor blocker Valsartan, an antihypertensive used in treatment heart failure, improves glycemic control. In the NAVIGATOR trial, 9306 patients with impaired glucose tolerance and established cardiovascular disease or cardiovascular risk factors were randomized to receive valsartan or placebo. In the treatment group, the hazard ratio for diabetes was 0.86 (95% confidence interval: 0.80-0.92, p\<0.001), whereas the incidence of cardiovascular outcomes remained unchanged [@navigatorstudygroup2010a]. In the DREAM trial, 5269 individuals with impaired fasting glucose levels or glucose tolerance without cardiovascular disease were randomized to ACE-inhibitor ramipril or placebo. The incidence of diabetes or death and median fasting plasma glucose levels did not differ between groups at the end of trial but participants in the treatment group were more likely to have regression to normoglycemia and had a better response to oral glucose tolerance tests[@dreamtrialinvestigators2006].\
 In a subgroup of participants of the PARADIGM-HF trial, 3778 individuals with diabetes and heart failure with reduced ejection fraction were randomized to receive combined angiotensin II receptor blocker and neprilysin inhibitor sacubitril/valsartan, a drug that has been shown to reduce morbidity and mortality in heart failure[@mcmurray2014], or ACE-inhibitor enalapril. Neprilysin is a widely expressed enzyme involved in the breakdown of angiotensin I and II, bradykinin, and glucagon-like peptide 1 (GLP-1). Mean HbA1c levels were reduced more and new use of insulin was 29% lower in the in the sacubitril/valsartan group compared to the enalapril group, suggesting that sacubitril/valsartan might enhance glycemic control in patients with diabetes and HFrEF. In addition to the effects on the renin-angiotensin system, the inhibition of the neprilysin might improve glycemic control through mechanisms related to increases in circulating GLP-1, natriuretic peptides and an altered lipid metabolism[@seferovic2017].
+
+#### SGLT2-inhibitor effects on glycemic control
+
+SGLT2-inhibitor treatment improves glycemic control almost immediately after starting treatment. HbA1c levels drop with 0.7 - 0.8 percentage points after the first 3 months of treatment but the effect attenuates with longer treatment and the change from baseline after 4 years of follow-up is -0.3 percentage points[@empaglifa; @canaglifa; @dapaglifb; @cardiovaa]. Other glucose-lowering agents have been shown to reduce cardiovascular risk[@ghosh-swaby2020]. Glucose-lowering drugs with similar glucose-lowering properties, however, do not affect cardiovascular risk equally. (meta-analysis figure). This has been one of the main arguments against improved glycaemic control as the main driver behind lower cardiovascular risk with SGLT2-inhibitors, despite being an established causal risk factor.
+
+
+
 
 ### Lipids and lipoproteins
 
@@ -103,13 +102,12 @@ discussion
 #### Remnant cholesterol
 
 and triglyceride-rich lipoproteins are established as causal risk factors for atherosclerotic cardiovascular disease [@ference2017; @nordestgaard2014].\
-sd remnant osv
 
-HDL
+#### SGLT2-inhbitor effects on lipids and lipoproteins
 
-Lp(a)
+Triglycerides and LDL cholesterol are causal risk factors for cardiovascular disease and therefore the relationship between SGLT2 inhbitors and lipids and lipoproteins has had to undergo examination. The primary investigation of this was part of the early stages of drug development, however, as animal studies did not reveal any effects on lipids and lipoprotein and no clear link between SGLT2 and lipids exist, this relationship has not been in focus. With the publication of the first large randomized trials a pattern was forming and showed that, unlike in animals, SGLT2 inhibitors affected lipid and lipoprotein levels in humans. In EMPA-REG OUTCOME (?) trial it was reported that the empagliflozin group demonstrated ... ldl hdl trig
 
-matche patofysiologi med sglt2 mekanismer
+Basu et al.[@basu2018] studied the mechanism behind the increased LDL and decreased triglycerides with SGLT2-inhibition using a mouse model expressing human cholesteryl ester transfer protein (CETP) and apolipoprotein B100 (ApoB100). Mice (n = 40) were assigned to 1 of 4 treatments, vehicle, canagliflozin, an SGLT2 antisense oligonucleotide or insulin. In the canagliflozin group, the effects on LDL cholesterol and triglycerides were similar as in human studies, showing a slight increase in LDL cholesterol and a decrease in triglycerides. To investigate changes in lipoprotein physiology lipoprotein lipase (LpL) activity, LDL receptor and post transcriptional modulator 9 (PCSK9) expression, and angiopoetin-like protein 4( ANGPTL 4) expression were assesed, and the conclusion of the study was that SGLT2 inhibitor and SGLT2 antisense oligonucleotide treatment increased plasma lipolytic activity and LpL acitivity, possibly because of reduced expression of ANGPTL4, especially in the SGLT2 antisense oligonucleotide treated mice. This might explain the reduction in triglyceride levels. Furthermore, the increase in LDL could be due to increased VLDL to LDL turnover and a reduced LDL clearance, possibly because of reduced LDL receptor and PCSK9 expression seen in the SGLT2 antisense oligonucleotide group.
 
 ### Obesity
 
@@ -124,10 +122,6 @@ observational and genetic studies
 ### Glycemic control
 
 ### Lipid metabolism
-
-Triglycerides and LDL cholesterol are causal risk factors for cardiovascular disease and therefore the relationship between SGLT2 inhbitors and lipids and lipoproteins has had to undergo examination. The primary investigation of this was part of the early stages of drug development, however, as animal studies did not reveal any effects on lipids and lipoprotein and no clear link between SGLT2 and lipids exist, this relationship has not been in focus. With the publication of the first large randomized trials a pattern was forming and showed that, unlike in animals, SGLT2 inhibitors affected lipid and lipoprotein levels in humans. In EMPA-REG OUTCOME (?) trial it was reported that the empagliflozin group demonstrated ... ldl hdl trig
-
-Basu et al.[@basu2018] studied the mechanism behind the increased LDL and decreased triglycerides with SGLT2-inhibition using a mouse model expressing human cholesteryl ester transfer protein (CETP) and apolipoprotein B100 (ApoB100). Mice (n = 40) were assigned to 1 of 4 treatments, vehicle, canagliflozin, an SGLT2 antisense oligonucleotide or insulin. In the canagliflozin group, the effects on LDL cholesterol and triglycerides were similar as in human studies, showing a slight increase in LDL cholesterol and a decrease in triglycerides. To investigate changes in lipoprotein physiology lipoprotein lipase (LpL) activity, LDL receptor and post transcriptional modulator 9 (PCSK9) expression, and angiopoetin-like protein 4( ANGPTL 4) expression were assesed, and the conclusion of the study was that SGLT2 inhibitor and SGLT2 antisense oligonucleotide treatment increased plasma lipolytic activity and LpL acitivity, possibly because of reduced expression of ANGPTL4, especially in the SGLT2 antisense oligonucleotide treated mice. This might explain the reduction in triglyceride levels. Furthermore, the increase in LDL could be due to increased VLDL to LDL turnover and a reduced LDL clearance, possibly because of reduced LDL receptor and PCSK9 expression seen in the SGLT2 antisense oligonucleotide group.
 
 ### Blood pressure and RAAS modulation
 

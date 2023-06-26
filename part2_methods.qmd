@@ -12,7 +12,7 @@ bibliography: references.bib
 
 ## UK Biobank
 
-## FinnGen 
+## FinnGen
 
 # Genotyping
 
@@ -35,6 +35,8 @@ bibliography: references.bib
 # Study designs
 
 ## Genetic variation as proxy for drug effects
+
+### Establishing causality
 
 ## Meta-analysis to aggregate RCT data
 
