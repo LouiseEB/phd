@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "PhD thesis"
+  author: "Louise Ellegaard Bechmann"
+  date: "1.5.2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part1_sglt2_review.qmd
+    - part2_methods.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+csl: vancouver-imperial-college-london.csl
+
+format:
+  docx:
+    reference-doc: custom-reference.docx
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual

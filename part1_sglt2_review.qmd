@@ -1,0 +1,150 @@
+---
+title: "Part 1: SGLT2-inhibition and cardiovascular disease" 
+file: "part1_sglt2_review.qmd" 
+bibliography: references.bib
+---
+
+historical references
+
+contemporary references
+
+focus on investigated mediators
+
+## Abstract
+
+## Sodium glucose co-transporter 2 as the perfect drug target
+
+SGLT2-inhibitors were developed as treatment for type 2 diabetes mellitus. The idea behind was simple and obvious: if there is a problem of excess glucose in bloodstream, it can be potentially be solved by increasing the loss of glucose in the kidneys. Sodium glucose co-transporter 2, the main driver for glucose reabsorption in the proximal tubule of the nephron, was the ideal target since the transporter is responsible for 99%(ref) of glucose reuptake following the primary filtration in the glomerulus. Early studies of SGLT2 physiology were conducted well before the actual discovery of SGLT2. In 1835, phlorizin - a naturally occuring phenol glucoside and SGLT2-inhibitor - was first isolated from apple tree bark[@koninck1836], and studies in the 1880s showed that the administration of this isolate caused renal glucosuria[@jÃ¶rgens2020]. It was, however, not until the 1980s that studies of phlorizin as a blocker of renal tubular glucose reabsorption gained traction[@starke1985; @rossetti1987], and that the connection to the phlorizin-like phenotype of familial renal glucosuria was found to be caused by genetic variation in the gene encoding SGLT2 (ref).\
+The first SGLT2-inhibitors or gliflozins went on the market in the early 2010s as novel oral antidiabetic treatment options, shown to reduce plasma glucose and weight (reference). Then, when results from large scale cardiovascular outcome trials, came out a few years later, type 2 diabetes mellitus treatment suddenly faced a shift in treatment paradigm: Up until 2015, treatment for type 2 diabetes had mainly been focused on lowering plasma glucose and improving lifestyle, but the results of the EMPA-REG OUTCOME trial revealed the potential of pharmacologically reducing cardiovascular risk along with risk of mortality. The EMPA-REG OUTCOME group found a 35% (95%CI: 15-50) lower risk of hospitalization for heart failure, a 38% (23-51) lower risk of cadiovascular mortality, and a 32% (18-43) lower risk of all-cause mortality for empagliflozin compared to placebo[@empaglif]. In the following years, the effects were also found in other SGLT2-inhibitor types[@dapaglif; @canaglif; @cardiova] (META-figur af de store studier) and it became evident that this not only had the potential to change diabetes treatment, but also to prevent cardiovascular outcomes in other at-risk populations[@petrie2020; @bays2014; @packer2020]. As a consequence, SGLT2-inhibitors Empagliflozin and Dapagliflozin are now included as class 1 recommended treatments for heart failure with reduced ejection fraction in individuals without diabetes in both European and American guidelines[@authors/taskforcemembers:2022; @heidenreich2022].
+
+Although several processes that may lead to cardiovascular disease are impacted by the metabolic changes that characterize type 2 diabetes, only hyperglycemia, dyslipidemia, hypertension, obesity, and sex will be described in this review to provide a framework for examining the relationship between SGLT2-inhibition and cardiovascular disease. Likewise, the mechanistic considerations for the effect of SGLT2-inhibitors on cardiovascular disease and mortality will be the most thorough for potential mechanisms explored in the two original studies included in the thesis.
+
+## Cardiovascular disease in a metabolic framework
+
+Cardiovascular mortality has been declining since the 1970s in nearly all regions of the world, especially in high-income countries such as North America, Western Europe, Japan, Australia and New Zealand[@gbd2013mortalityandcausesofdeathcollaborators2015; @moran2014; @roth2015], and this can be explained by numerous different trends. In the first half of the 20th century, life expectancy dramatically increased as a result of improved sanitation, vaccines, and antibiotics, and suddenly people lived long enough to experience atherosclerosis, heart disease, and cancer, that together replaced infectious diseases as leading causes of death[@mensah2017]. However, in the 1970's, epidemiologists from the United States and Australia published studies showing that coronary heart disease mortality surprisingly had begun to decline after peaking in the late 1960's[@rogers1977; @reader1972], and they were later accompanied by epidemiologists showing similar declines in other regions (DK, Norge?). The declining trend in cardiovascular mortality has continued since and has been explained partly by progress in evidence-based medicine and surgical practices and continuously improved secondary prevention after a cardiovascular event, and partly by changes in risk factors including reductions in low-density lipoprotein cholesterol, systolic blood pressure, and smoking. There is however a problem that is likely to manifest itself in the cardiovascular disease mortality trends in the next few decades and not only be limited to some population groups. Because, while overall cardiovascular mortality is declining, the increasing global epidemic of obesity and type 2 diabetes accounts for an increasing number of cardiovascular deaths[@ford2007].\
+The prevalence of diabetes continues to rise and it is estimated that by 2045, 693 million people will be suffering from diabetes, presenting a large social, financial, and health system burden across the world[@cho2018]. Cardiovascular disease is the main cause of morbidity and mortality in type 2 diabetes where cardiovascular events occur 14.6 years earlier (find better number, newer) and are more severe than in individuals without diabetes. It is estimated that more than 50% of individuals with type 2 diabetes will die from a cardiovascular event. Type 2 diabetes is a complex disease and often characterized as a largely lifestyle-associated disease and the increased urbanization and spread of sedentary lifestyle in the recent decades account well for the continuing increase in prevalence. While lifestyle contributes significantly to the development of type 2 diabetes, the Look AHEAD trial demonstrated that improving lifestyle did not improve cardiovascular risk in spite of weight loss and a decrease in HbA1c[@cardiova2013]. While interpreting a study as the Look AHEAD trial is difficult because of potential bias in the selected population, the lack of significant effects of lifestyle improvements may also be explained by the relatively short study period. However, the results emphasize that reaching an HbA1c or weight target ought to be supplemented by other approaches specifically targeting cardiovascular risk in type 2 diabetes management, especially if the risk reduction should be fast.
+
+Additionally, studies have found that the risk of cardiovascular mortality is higher in women with diabetes than in men with diabetes [@huxley2006]
+
+### Risk of atherosclerotic cardiovascular disease (in individuals with and without type 2 diabetes)
+
+The greek word atherosclerosis is composed of the word "athero", meaning gruel or paste, and "sclerosis", meaning hardness, and is used to describe plaque build-up and hardening of the arteries. The plaques are formed as cholesterol and lipids accumulate in the arterial wall, triggering inflammation and further accumulation of cellular waste products, calcification and the formation of a fibrous cap. This process can lead to several conditions depending on the localization and severity of the plaque build-up. Frequent manifestations of atherosclerosis include coronary heart disease, ischemic stroke, peripheral artery disease, and heart failure, but also angina pectoris, transient ischemic attack, and aortic aneurysm. The atherosclerotic process is similar in individuals with and without type 2 diabetes but is aggravated by the metabolic changes that characterize type 2 diabetes such as insulin resistance, hyperglycemia and disturbances in the carbohydrate-, fat- and protein metabolism. Major risk factors for atherosclerotic cardiovascular disease are smoking, hypertension, hypercholesterolemia, and diabetes.
+
+However, heart failure is not necessarily a result of atherosclerosis and the distinction between different origins of heart failure is important in understanding the different mechanisms and treatment strategies for atherosclerotic and non-atherosclerotic cardiovascular disease.
+
+### Heart failure (Heart failure pathophysiology in individuals without diabetes)
+
+Heart failure is a common and serious complication of diabetes; it has been found to be the most common presentation of cardiovascular disease after peripheral artery disease in individuals with type 2 diabetes[@shah2015]. Heart failure often occurs as a result of atherosclerosis that ultimately compromises myocardial blood flow and causes ischemic cardiomyopathy, but can also be the consequence of other disturbances. Both in individuals with and without diabetes, hypertension is a major risk factor for heart failure because of the increased cardiac pre? - and afterload eventually resulting in left ventricular hypertrophy. In diabetes, metabolic changes can lead to diabetic cardiomyopathy (debated?) without atherosclerosis, although atherosclerosis will often be a contributing factor.
+
+HFrEF HFpEF
+
+The risk factors for heart failure are different in women and men, and has different risk factors, epidemiology, prognosis and treatment responses.
+
+can be a result of long-term atherosclerotic disease that ultimately compromises the pump function, however, heart failure also exits as a consequence of myocardial fibrosis
+
+(While it is well described that type 2 diabetes mellitus and cardiovascular disease share numerous risk factors, such as obesity, dyslipidemia, insulin resistance, low-grade inflammation, and thrombophilia, less is known about causal order of these conditions[@derosa2018].)
+
+Metabolic syndrome
+
+*Reducing cardiovascular risk is key in type 2 diabetes management.*
+
+atherosclerotic cv and other, definitions
+
+the elusive nature of cardiovascular risk in diabetes
+
+risk of hf, mi, ihd, ascvd, death
+
+## Understanding risk factors for cardiovascular disease and type 2 diabetes as an exacerbating factor
+
+### Glucose
+
+Historical context
+
+The relationship between plasma glucose and cardiovascular risk is undeniable. The increased risk of cardiovascular disease in the general population begins even within the normal plasma glucose range (spline glucose and hba1c ukb?). Mendelian randomization studies have established the causal relationship between higher plasma glucose and risk of myocardial infarction[@emanuelsson2020; @benn2012], free from limitations such as reverse causation which can be an issue in observational analyses.\
+Hyperglycemia pathophysiology in type 2 diabetes involves insulin resistance in muscle and liver tissue, impaired beta-cell glucose sensitivity, and an increased insulin secretion, creating a sequence of reciprocal cause and effect which intensifies and aggravates the high glucose level and its negative effects.
+
+Hyperglycemia promotes atherosclerosis by acting on several levels of the atherosclerotic process; i.e. endothelial function, metabolic pathways, inflammation, fibrous cap formation, and thrombosis.
+
+by facilitating leucocyte adhesion to endothelial cells and by impairing endothelial function via inhibition of nitric oxide production and an increase in endothelin-1, E-selectin, VCAM-1, ICAM-1, reactive oxygen species, angiotensin II, and plasminogen activator inhibitor 1 levels. Both hyperglycemia and hyperinsulinemia induced by high levels of free fatty acids leads to a higher production of super-oxide in the endothelium and thereby inflammation and impairment of the endothelial function[@insulin] (omformuleres og flere refs).
+
+However, because it is the main diagnostic criterium, treating physicians can be prone to lose sight of the multi-organ nature of the disease.
+
+What role do glucose lowering drugs play in changing the risk profile?
+
+Additionally, pharmaceutical glucose-lowering has been shown to reduce cardiovascular risk[@ghosh-swaby2020], though the effects vary across drug type. Glucose-lowering drugs with similar glucose-lowering properties, however, do not affect cardiovascular risk equally.
+
+#### Renin angiotensin system and glycemic control
+
+Further illustrating the interlaced mechanisms and complicated cause and effect relationships between hyperglycemia or type 2 diabetes and heart failure, studies have shown that angiotensin II receptor blocker Valsartan, an antihypertensive used in treatment heart failure, improves glycemic control. In the NAVIGATOR trial, 9306 patients with impaired glucose tolerance and established cardiovascular disease or cardiovascular risk factors were randomized to receive valsartan or placebo. In the treatment group, the hazard ratio for diabetes was 0.86 (95% confidence interval: 0.80-0.92, p\<0.001), whereas the incidence of cardiovascular outcomes remained unchanged [@navigatorstudygroup2010a]. In the DREAM trial, 5269 individuals with impaired fasting glucose levels or glucose tolerance without cardiovascular disease were randomized to ACE-inhibitor ramipril or placebo. The incidence of diabetes or death and median fasting plasma glucose levels did not differ between groups at the end of trial but participants in the treatment group were more likely to have regression to normoglycemia and had a better response to oral glucose tolerance tests[@dreamtrialinvestigators2006].\
+In a subgroup of participants of the PARADIGM-HF trial, 3778 individuals with diabetes and heart failure with reduced ejection fraction were randomized to receive combined angiotensin II receptor blocker and neprilysin inhibitor sacubitril/valsartan, a drug that has been shown to reduce morbidity and mortality in heart failure[@mcmurray2014], or ACE-inhibitor enalapril. Neprilysin is a widely expressed enzyme involved in the breakdown of angiotensin I and II, bradykinin, and glucagon-like peptide 1 (GLP-1). Mean HbA1c levels were reduced more and new use of insulin was 29% lower in the in the sacubitril/valsartan group compared to the enalapril group, suggesting that sacubitril/valsartan might enhance glycemic control in patients with diabetes and HFrEF. In addition to the effects on the renin-angiotensin system, the inhibition of the neprilysin might improve glycemic control through mechanisms related to increases in circulating GLP-1, natriuretic peptides and an altered lipid metabolism[@seferovic2017].
+
+### Lipids and lipoproteins
+
+Lipids and lipoproteins play a central role in the development and progression of atherosclerotic disease, a discovery that began to take shape in the beginning of the 20th century as the incidence of cardiovascular disease began to rise as described in section ... .
+
+Framingham
+
+and lipid lowering strategies are key in the prevention of cardiovascular disease.
+
+#### LDL cholesterol
+
+Low-density lipoproteins (LDL) are established causal risk factors for atherosclerotic cardiovascular disease and are often pointed to as the primary cause of atherosclerosis.
+
+sd ldl vldl
+
+#### HDL cholesterol
+
+discussion
+
+#### Triglycerides
+
+#### Lipoprotein(a)
+
+#### Remnant cholesterol
+
+and triglyceride-rich lipoproteins are established as causal risk factors for atherosclerotic cardiovascular disease [@ference2017; @nordestgaard2014].\
+sd remnant osv
+
+HDL
+
+Lp(a)
+
+matche patofysiologi med sglt2 mekanismer
+
+### Obesity
+
+CVD trend down, obesity trend up, how?
+
+### Hypertension
+
+## SGLT2-inhibition and risk of cardiovascular disease and mortality
+
+observational and genetic studies
+
+### Glycemic control
+
+### Lipid metabolism
+
+Triglycerides and LDL cholesterol are causal risk factors for cardiovascular disease and therefore the relationship between SGLT2 inhbitors and lipids and lipoproteins has had to undergo examination. The primary investigation of this was part of the early stages of drug development, however, as animal studies did not reveal any effects on lipids and lipoprotein and no clear link between SGLT2 and lipids exist, this relationship has not been in focus. With the publication of the first large randomized trials a pattern was forming and showed that, unlike in animals, SGLT2 inhibitors affected lipid and lipoprotein levels in humans. In EMPA-REG OUTCOME (?) trial it was reported that the empagliflozin group demonstrated ... ldl hdl trig
+
+Basu et al.[@basu2018] studied the mechanism behind the increased LDL and decreased triglycerides with SGLT2-inhibition using a mouse model expressing human cholesteryl ester transfer protein (CETP) and apolipoprotein B100 (ApoB100). Mice (n = 40) were assigned to 1 of 4 treatments, vehicle, canagliflozin, an SGLT2 antisense oligonucleotide or insulin. In the canagliflozin group, the effects on LDL cholesterol and triglycerides were similar as in human studies, showing a slight increase in LDL cholesterol and a decrease in triglycerides. To investigate changes in lipoprotein physiology lipoprotein lipase (LpL) activity, LDL receptor and post transcriptional modulator 9 (PCSK9) expression, and angiopoetin-like protein 4( ANGPTL 4) expression were assesed, and the conclusion of the study was that SGLT2 inhibitor and SGLT2 antisense oligonucleotide treatment increased plasma lipolytic activity and LpL acitivity, possibly because of reduced expression of ANGPTL4, especially in the SGLT2 antisense oligonucleotide treated mice. This might explain the reduction in triglyceride levels. Furthermore, the increase in LDL could be due to increased VLDL to LDL turnover and a reduced LDL clearance, possibly because of reduced LDL receptor and PCSK9 expression seen in the SGLT2 antisense oligonucleotide group.
+
+### Blood pressure and RAAS modulation
+
+### Body mass
+
+### Natriuresis and osmotic fluid loss
+
+### Cardiac energy metabolism
+
+### Na+/H+
+
+### Reduced inflammation
+
+### ROS
+
+### Vascular function
+
+## Conclusion and perspectives
+
+prevention of diabetes and cvd , prophylaxis vs treatment, semaglutid?

@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "191b4abb"
+  },
+  "intro.qmd": {
+    "intro.html": "aae31ca9"
+  },
+  "summary.qmd": {
+    "summary.html": "59333f50"
+  },
+  "references.qmd": {
+    "references.html": "7e108081"
+  },
+  "study_design.qmd": {
+    "study_design.html": "e27b496d"
+  },
+  "part1_sglt2_review.qmd": {
+    "part1_sglt2_review.html": "3562898e"
+  },
+  "part2_methods.qmd": {
+    "part2_methods.html": "bbf3b40e"
+  }
+}

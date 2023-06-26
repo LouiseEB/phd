@@ -1,0 +1,55 @@
+---
+title: "Part 2: Methods in critical review "
+file: "part2_methods.qmd"
+bibliography: references.bib
+---
+
+# Study populations and designs
+
+## Copenhagen City Heart Study
+
+## Copenhagen General Population Study
+
+## UK Biobank
+
+## FinnGen 
+
+# Genotyping
+
+# Potential mediators
+
+# Study endpoints
+
+# National registries
+
+## The Danish Civil Register
+
+## The National Danish Patient Registry
+
+## The Danish Registry of Causes of Death
+
+## UK registers
+
+## Finnish registers
+
+# Study designs
+
+## Genetic variation as proxy for drug effects
+
+## Meta-analysis to aggregate RCT data
+
+# Statistical analysis
+
+## Observational
+
+## Survival
+
+## Mediation analysis
+
+## Meta-analysis
+
+## Calculating power and estimating sample size
+
+An important consideration when designing a study, is including a sufficient sample size in order to test the hypothesis. Failing to do this may lead to type 1 (false positive or rejecting a null hypothesis that is in fact true) or type 2 error (false negative or failing to reject a null hypothesis that is in fact false) (FIGURE?) [@jones2003].\
+\
+\\newpage
