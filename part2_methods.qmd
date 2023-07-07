@@ -4,17 +4,56 @@ file: "part2_methods.qmd"
 bibliography: references.bib
 ---
 
-# Study populations and designs
+# Study populations, materials and designs
+The two original papers are based on population data and published randomized controlled trials, respectively. 
+The first paper is based on population data from The Copenhagen City Heart Study, The Copenhagen General Population Study, the UK Biobank, and FinnGen. 
 
-## Copenhagen City Heart Study
+```{r}
+table_data <- tibble(
+  `bob` = c(NA, "Exposure", "Endpoints", "Materials", "Methods"),
+  `Paper 1` = c(
+    "Genetic variation in SLC5A2 mimicking SGLT2-inhibition and risk of cardiovascular disease and all-cause mortality: reduced risk not explained by lower plasma glucose",
+    "SLC5A2 genetic variation",
+    "Heart failure\nMyocardial infarction\nIschemic heart disease\nIschemic stroke\nCardiovascular mortality\nAll-cause mortality",
+    "CCHS: N = 10,344 \nCGPS: N = 102,368 \nUK Biobank: N = 488,687 \nFinnGen: N = 342,499",
+    "Survival analysis \nObservational analysis \nMediation analysis"
+  ),
+  `Paper 2` = c(
+    "SGLT2-inhibition increases total, LDL, and HDL cholesterol and lowers triglycerides: meta-analyses of 60 randomized trials, overall and by dose, ethnicity, and drug type",
+    "SGLT2-inhibitor treatment",
+    "Change in:
+Total cholesterol
+LDL cholesterol
+HDL cholesterol
+Triglycerides
+",
+"60 randomized controlled trials, including 147,130 individuals",
+"Meta-analysis"
+  )
+) 
 
-## Copenhagen General Population Study
+knitr::kable(table_data)
+```
+
+
+## Copenhagen City Heart Study and the Copenhagen General Population Study
+
+The Copenhagen City Heart Study (CCHS) is a study of the Danish general population that began in 1976-1978, with subsequent follow-up examinations conducted in 1981-1983, 1991-1994, and 2001-2003. Eligible participants were invited based on the national Danish Civil Registration System to ensure representation of adults aged 20-100 years. Data collection involved self-administered questionnaires, physical examinations, and blood samples, including DNA. 
+Similarly, the Copenhagen General Population Study (CGPS) is another comprehensive examination of the Danish general population, which was initiated between 2003 and 2015. The selection and examination procedures for participants in the CGPS were similar to the CCHS. 
+99.5% of the participants were of white ethnicity and of Danish descent. Furthermore, no individuals were included in both studies.
+Both studies were approved by institutional review boards and Danish ethical committees (KF-100.2039/91, KF-01-144/01, H-KF-01-144/01) and conducted according to the declaration of Helsinki. Written informed consent was obtained from all individuals.
 
 ## UK Biobank
+UK Biobank is a study of the general population of the United Kingdom initiated in 2005-2010. 500,000 individuals aged 40-69 at inclusion were recruited28. The study was approved by the North West Haydock Research Ethics Committee(16/NW/0274). 
+Among included individuals in the present study, 460,493 identified as white, 9,466 as Asian, 7,638 as Black, 2,870 as mixed ethnicity, 1,503 as Chinese, and 6,717 did not report on ethnicity.
 
 ## FinnGen
+FinnGen is a Finnish study initiated in 2017 aiming to include 500,000 Finns, currently with genotyping and phenotyping information on 342,499 individuals. Participants have a median age of 63 years and are predominantly recruited at hospitals. Follow-up began on January 1, 1998. Summary endpoint data from release 8 from December 2022 was used in the first paper.
 
 # Genotyping
+A genetic variant in *SLC5A2*, rs61742739,c.1961A>G; p.(Asn654Ser), was selected based on the knowledge of this variant being associated with familial renal glucosuria (OMIM*182381)21–25, a phenotype resembling the effect of pharmacological SGLT2-inhibition. The selection process of the genetic variant is described in Supplementary Figure 1. The asparagine to serine substitution at codon 654 is in a highly conserved position of the SGLT2 protein, indicating that this part of the protein is functionally important. Some, but not all in silico prediction models suggest that this variant is “deleterious” (SIFT) or “likely disease causing” (REVEL); however, to the best of our knowledge, there are no published in vitro, animal, or human functional studies of this variant. SLCA2 is highly expressed in the kidney but also moderately expressed in cardiac and vascular tissue(Supplementary Figure 2 and Supplementary Table 1)30. 
+Genotyping in the CCHS and CGPS (by TaqMan), quality control, and accuracy is described in Supplementary Appendix 2. Genotyping was described previously for the UK Biobank28 and FinnGen29. Quantification of urine glucose in the CCHS and urine sodium in the UK Biobank, respectively, is shown in Supplementary Figure 3, and bioinformatic information in Supplementary Table 2. 
+
 
 # Potential mediators
 
