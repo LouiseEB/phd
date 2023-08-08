@@ -4,82 +4,265 @@ file: "part2_methods.qmd"
 bibliography: references.bib
 ---
 
-# Study populations, materials and designs
-The two original papers are based on population data and published randomized controlled trials, respectively. 
-The first paper is based on population data from The Copenhagen City Heart Study, The Copenhagen General Population Study, the UK Biobank, and FinnGen. 
+\pagebreak
 
-```{r}
-table_data <- tibble(
-  `bob` = c(NA, "Exposure", "Endpoints", "Materials", "Methods"),
-  `Paper 1` = c(
-    "Genetic variation in SLC5A2 mimicking SGLT2-inhibition and risk of cardiovascular disease and all-cause mortality: reduced risk not explained by lower plasma glucose",
-    "SLC5A2 genetic variation",
-    "Heart failure\nMyocardial infarction\nIschemic heart disease\nIschemic stroke\nCardiovascular mortality\nAll-cause mortality",
-    "CCHS: N = 10,344 \nCGPS: N = 102,368 \nUK Biobank: N = 488,687 \nFinnGen: N = 342,499",
-    "Survival analysis \nObservational analysis \nMediation analysis"
-  ),
-  `Paper 2` = c(
-    "SGLT2-inhibition increases total, LDL, and HDL cholesterol and lowers triglycerides: meta-analyses of 60 randomized trials, overall and by dose, ethnicity, and drug type",
-    "SGLT2-inhibitor treatment",
-    "Change in:
-Total cholesterol
-LDL cholesterol
-HDL cholesterol
-Triglycerides
-",
-"60 randomized controlled trials, including 147,130 individuals",
-"Meta-analysis"
-  )
-) 
+# Introduction
 
-knitr::kable(table_data)
-```
+In the two studies included in this thesis, we explore potential mediators of the effect of pharmacological SGLT2-inhibition on risk of cardiovascular disease and mortality. In **Paper I**, we use data from large population studies in Denmark, the United Kingdom, and Finland, and explore the relationship between genetic variation in *SLC5A2*, encoding SGLT2, and risk of heart failure, myocardial infarction, ischemic heart disease, ischemic stroke, cardiovascular mortality, and all-cause mortality and aim to quantify proportion of the total effect mediated through potential mediators. In **Paper II**, we have meta-analyzed the results of 60 randomized placebo-controlled trials of SGLT2-inhibitors to investigate the effect of treatment on levels of total, LDL, and HDL cholesterol and triglycerides, all known to play a role in atherosclerosis and subsequent cardiovascular disease and possible death.\
+In the following part of the thesis, methods and materials used in the two original papers will be expanded and a variety of biases and limitations that may have affected the results will be discussed. Some biases, we can quite safely dismiss as having a large influence, while the influence of others is not easily quantified.\
+For more specific descriptions of methods, please refer to the enclosed papers and their supplementary appendices.
 
+In @fig-table_of_papers an overview of the methods and materials used in the two papers is shown.
 
-## Copenhagen City Heart Study and the Copenhagen General Population Study
+\pagebreak
 
-The Copenhagen City Heart Study (CCHS) is a study of the Danish general population that began in 1976-1978, with subsequent follow-up examinations conducted in 1981-1983, 1991-1994, and 2001-2003. Eligible participants were invited based on the national Danish Civil Registration System to ensure representation of adults aged 20-100 years. Data collection involved self-administered questionnaires, physical examinations, and blood samples, including DNA. 
-Similarly, the Copenhagen General Population Study (CGPS) is another comprehensive examination of the Danish general population, which was initiated between 2003 and 2015. The selection and examination procedures for participants in the CGPS were similar to the CCHS. 
-99.5% of the participants were of white ethnicity and of Danish descent. Furthermore, no individuals were included in both studies.
-Both studies were approved by institutional review boards and Danish ethical committees (KF-100.2039/91, KF-01-144/01, H-KF-01-144/01) and conducted according to the declaration of Helsinki. Written informed consent was obtained from all individuals.
+![Overview of the materials and methods used in the two papers included in the thesis.](table%20of%20paper%20materials%20and%20methods.png){#fig-table_of_papers width="1900"}
+
+# Study populations and materials
+
+The two original papers are based on population data and published randomized controlled trials, respectively. **Paper I** is based on population data from The Copenhagen City Heart Study, The Copenhagen General Population Study, and validated with data from the UK Biobank and FinnGen. **Paper II** is based on results from 60 different randomized controlled trials.
+
+## The Copenhagen City Heart Study
+
+The Copenhagen City Heart Study (CCHS) is a study of the Danish general population that began in 1976-1978, with subsequent follow-up examinations conducted in 1981-1983, 1991-1994, and 2001-2003, designed to investigate the occurrence and patterns of cardiovascular disease. Eligible participants were invited randomly from a pool of approximately 90,000 individuals of Danish descent residing near Rigshospitalet, Copenhagen University Hospital, using the Danish Civil Registration System. Invitations to participate were stratified by sex and 5-year age groups to ensure an accurate representation of the adult population aged 20-80+ years. Prior to examination, participants were provided with a comprehensive questionnaire covering various aspects of their health and lifestyle, which they were required to complete. On the day of the examination, the questionnaire answers were reviewed by an examiner. Participants underwent physical examination which included measurements of blood pressure, height, weight, and other relevant factors, and had blood samples drawn for biochemical analyses and biobanking. In the third and fourth examinations, participants were also asked to provide consent for DNA extraction, leading to the establishment of a DNA biobank [@nordestgaard1996]. The initial examination included a total of 14,223 individuals. For the second examination, the cohort was supplemented with 500 men and women aged 20-24 years. In the third examination, an additional 3,000 men and women aged 20-49 years (250 men and 250 women in each 5-year age group) were included, while the fourth examination involved the inclusion of 1,040 individuals aged 20-34 years. The participation rate was 61% (ref) All individuals who were originally invited to the study, including the supplemental participants, were invited to attend the follow-up examinations, regardless of their current address outside the study area. The response rates for the follow-up examinations were 70%, 61%, and 50% respectively, with the third examination involving the participation of 10,049 individuals and 9,259 agreeing to contribute blood samples to the DNA biobank. The fourth examination included 6,237 participants, with all agreeing to provide blood samples for the DNA biobank [@nordestgaard1996]. 99.5% of the participants were of white ethnicity and of Danish descent. The study was approved by institutional review boards and Danish ethical committees (KF-100.2039/91, KF-01-144/01, H-KF-01-144/01) and conducted according to the declaration of Helsinki. Written informed consent was obtained from all individuals.
+
+For **Paper I,** baseline data from the first examination of each individual (examinations 1-4) was used for the analyses, however depending on the participants having been examined in examination 3 or 4 in order to collect DNA for genetic analyses. All 10,344 individuals with available genetic information for the study were included.
+
+## The Copenhagen General Population Study
+
+The Copenhagen General Population Study is an ongoing cohort study that was initiated in 2003. Follow-up examinations began in 2014 and are ongoing. Participants were invited from various geographical regions within the greater Copenhagen area, with 25% of individuals aged 20-40 years and 100% of individuals aged over 40 years invited to participate. The participation rate for the first examination was approximately 42%. Procedures for questionnaire, physical examination, blood sampling for biochemical analyses, DNA, and biobanking were similar to the Copenhagen City Heart Study. Similarly to the Copenhagen City Heart Study, 99.5% of the participants were of white ethnicity and of Danish descent. The study was approved by institutional review boards and Danish ethical committees (KF-100.2039/91, KF-01-144/01, H-KF-01-144/01) and conducted according to the declaration of Helsinki. Written informed consent was obtained from all individuals. Furthermore, no individuals were included in both The Copenhagen City Heart Study and the Copenhagen General Population Study.
+
+For **Paper I,** all 102,368 individuals with available genetic information for the study were included.
 
 ## UK Biobank
-UK Biobank is a study of the general population of the United Kingdom initiated in 2005-2010. 500,000 individuals aged 40-69 at inclusion were recruited28. The study was approved by the North West Haydock Research Ethics Committee(16/NW/0274). 
-Among included individuals in the present study, 460,493 identified as white, 9,466 as Asian, 7,638 as Black, 2,870 as mixed ethnicity, 1,503 as Chinese, and 6,717 did not report on ethnicity.
+
+The UK Biobank is a large prospective study of the middle and old age general population of the United Kingdom. The study was initiated in 2005-2010 and more than 500,000 individuals aged 40-69 at the time of entry were included. Participants were selected using the National Health Service (NHS) register, and invited to volunteer for the study. Since, information on characteristics, and phenotypic and genotypic traits of the participants has been continuously collected. This includes data obtained from questionnaires, physical measurements, blood samples for biochemical analyses, accelerometry, multimodal imaging, genome-wide genotyping, and longitudinal follow-up for a diverse array of health-related outcomes[@sudlow2015; @bycroft2018]. The participation rate for the initial examination was 5%[@fry2017].\
+The study was approved by the North West Haydock Research Ethics Committee(16/NW/0274).
+
+For **Paper I,** 488,687 individuals with available genetic information for the study were included. Among these, 460,493 identified as being white, 9,466 as Asian, 7,638 as Black, 2,870 as mixed ethnicity, 1,503 as Chinese, and 6,717 did not report on ethnicity.
 
 ## FinnGen
-FinnGen is a Finnish study initiated in 2017 aiming to include 500,000 Finns, currently with genotyping and phenotyping information on 342,499 individuals. Participants have a median age of 63 years and are predominantly recruited at hospitals. Follow-up began on January 1, 1998. Summary endpoint data from release 8 from December 2022 was used in the first paper.
 
-# Genotyping
-A genetic variant in *SLC5A2*, rs61742739,c.1961A>G; p.(Asn654Ser), was selected based on the knowledge of this variant being associated with familial renal glucosuria (OMIM*182381)21–25, a phenotype resembling the effect of pharmacological SGLT2-inhibition. The selection process of the genetic variant is described in Supplementary Figure 1. The asparagine to serine substitution at codon 654 is in a highly conserved position of the SGLT2 protein, indicating that this part of the protein is functionally important. Some, but not all in silico prediction models suggest that this variant is “deleterious” (SIFT) or “likely disease causing” (REVEL); however, to the best of our knowledge, there are no published in vitro, animal, or human functional studies of this variant. SLCA2 is highly expressed in the kidney but also moderately expressed in cardiac and vascular tissue(Supplementary Figure 2 and Supplementary Table 1)30. 
-Genotyping in the CCHS and CGPS (by TaqMan), quality control, and accuracy is described in Supplementary Appendix 2. Genotyping was described previously for the UK Biobank28 and FinnGen29. Quantification of urine glucose in the CCHS and urine sodium in the UK Biobank, respectively, is shown in Supplementary Figure 3, and bioinformatic information in Supplementary Table 2. 
+FinnGen is a Finnish study initiated in 2017 aiming to include 500,000 individuals. The Finnish population is a population isolate with enrichment of some genetic variants that survived the bottleneck of the founder population. Currently, genotyping and phenotyping information is available on 342,499 individuals (release 8). Participants have a median age of 63 years and are predominantly recruited at hospitals. FinnGen is a public-private partnership with the aim of gaining novel insights into disease genetics by combining imputed genotype data from Finnish biobanks with digital health record data sourced from Finnish health registries. The initiative includes 9 Finnish biobanks, research institutes, universities, university hospitals, 13 international pharmaceutical industry partners, and the Finnish Biobank Cooperative (FINBB). The project makes use of data from the nationwide longitudinal health register collected since 1969 from every resident in Finland. Currently, FinnGen has genotyping and phenotyping information on 342,499 individuals. Participants have a median age of 63 years and were predominantly recruited at hospitals[@kurki2023].
 
+For **Paper I,** summary level endpoint data from release 8 from December 2022 was used.
 
-# Potential mediators
+## Strengths, limitations and risk of bias in study populations
 
-# Study endpoints
+Add strengths
+
+The Copenhagen City Heart Study, the Copenhagen General Population Study and the UK Biobank were all designed to be studies of the general population. This means that the distrubution of invitations to participate in the studies was designed to include and reflect the general population, making it possible to extrapolate results from studies on the cohort to the actual general population. However, to fulfill this, first, the general characteristics of the invited participants should match the actual general population in respect numerous baseline characteristics, such as age, sex, ethnicity and/or race, socioeconomic status, and disease risk factors (reference designing a general population cohort). Second, all invited participants should then chose to take part in the study.
+
+Deviations from these requirements may give rise to a range of different selection biases.
+
+-   **Sampling bias or ascertainment bias** occurs when members of the intended population (in this case the general population) are less likely to be invited or included compared to others.
+
+-   **Undercoverage bias** occurs when some groups of the population are not or less represented in the sample. For example, the lack of invitations to participants of other ethnicity and/or race than Danish/white in the Copenhagen City Heart Study and the Copenhagen General Population study means that the cohorts do not in fact reflect the Danish general population, which consists of xx% white danish, xx% others, and that results from studies in these populations cannot easily be extrapolated to include non-ethnic Danish individuals of the Danish population.
+
+-   **Non-response bias** occurs when individuals who chose not to participate systematically differ from the ones who do participate. Participation rates were 61% and 43% in the CCHS and CGPS, respectively, and 5% in the UK Biobank. find reference på dette
+
+-   **Attrition bias** occurs when participants who drop out of a study systematically differs from those who remain. For **Paper I**, DNA samples were only available for individuals having been included in examination 3 or 4, meaning that either participants had to be newly enrolled or they had to have not dropped out of the study until they reached examination 3 or 4 in order to be included in the analyses in the paper. Attrition bias might therefore affect the results in **Paper I**.\
+    The Copenhagen City Heart Study, the Copenhagen General Population Study and the UK Biobank all expand their data collection through follow-up examinations, with the potential of declining participation rates (see above for the Copenhagen City Heart Study response rates for the follow-up examinations).
+
+-   **Healthy volunteer/participant bias** occurs when the individuals who chose to participate are systematically healthier than those who do not. In the UK Biobank, this is for example demonstrated by lower rates of obesity, smoking, alcohol intake and self-reported health conditions compared to the general population of the United Kingdom of the same age. Also, women, older individuals, and those residing in less socioeconomically deprived areas had higher rates of participation in the UK Biobank[@fry2017].
+
+-   **Survivor bias/ immortal time bias** occurs when
+
+-   **Loss to follow-up**
+
+internal/external validity of studies
+
+In **Paper I**, summary level data on genetics and endpoints from FinnGen is used for validation. This approach is limited by the lack of individual level data and especially the different composition of FinnGen versus the Copenhagen studies. As mentioned, the Finnish population being a population isolate may provide several opportunities in genetic research because of the enrichment of certain variants. Conversely, the genetic isolate effect may also cause some variants to be extremely rare due to being missing or similarly rare in the founding population. This will inevitably limit the intepretation of some single single nucleotide polymorphism (SNP) studies, that will simply be underpowered compared to a similar study in another genetic population. Furthermore, the participants in FinnGen were predominantly recruited at hospitals, and is therefore enriched for disease endpoints compared to a general population, also complicating the use of FinnGen data as validation data for general population results.
+
+## Randomized controlled trials of SGLT2-inhibitors
+
+At the literature search state of any study, considering and applying a search strategy is advised. A commonly used strategy is the Population, Intervention, Comparison, Outcome (PICO) to identify the correct studies and limit the amount of useless search hits[@agoritsas2012]. Most research search engines only search in abstracts of published papers, making researchers dependent on abstracts to contain the PICO information for this strategy to work. With the growing body of evidence and published medical science, the call for effective search algorithms to retrieve the results that they are actually looking for is more important than ever. It is increasingly more common to publish open access and to include the full text of a paper in PubMed Central, making it to searchable it PubMed, and while this provides better opportunities to find what you are looking for [@kim2022], it also comes with a risk of bias since open access publishing is not equal for all. With the turn of the millennium, when online publishing began to overtake as the main source of scientific information, the paywalls to read papers made the inequality in accessibility very visible, spurring the call for open access. The pursuit of open access has lead to situation where publishers have shifted to supply-side funding, which means that only those with access to funding are able to share their research, continuing the practice of inequality in accessibility to publishing and reading scientific papers[@green2019]. All this means that even though all research that is published today is available online - with or without a paywall - it is still not possible to conduct an actual full-text search to find the exact details one might be looking for. When an entire project depends on the search strategy, this problem can become very time-consuming to solve and may even cause faulty results or valid projects to be abandoned early on.
+
+For **Paper II**, PubMed, EMBASE, and Web of Science were searched for all randomized placebo-controlled trials on all SGLT2-inhibitors written in English. This was done to make sure that all studies reporting changes in total cholesterol, low-density lipoprotein (LDL) cholesterol, high-density lipoprotein (HDL) cholesterol, and triglycerides could be included. Since change in lipids and lipoproteins was only rarely the primary endpoint, search words like "cholesterol" or "triglycerides" only rarely appeared in the abstract, and including these in the search string would therefore have excluded most studies from the beginning. The search strategy lead to 2,346 unique abstracts. After screening, 419 papers were found eligible for full-text screening or full-text search of search words matching the endpoints. This was done in R using regular expressions and a list of all papers with one or more matches was returned. The papers were then read to do the final screening, and in the end 60 studies with available information in change in total cholesterol, LDL cholesterol, HDL cholesterol, and triglycerides (prisma figur adapt?).
+
+## Limitations and bias in randomized controlled trials of SGLT2-inhibitors
+
+The effort identify all published studies of SGLT2-inhibitor randomized placebo-controlled trials reporting on change in lipids and lipoproteins could potentially have been affected by a number of different biases and limitations.
+
+-   **Selection bias** occurs if the search strategy has been insufficient to identify all studies or in the manual process of screening and selecting abstracts for full-text screening. This may have lead to relevant studies not being included.
+
+-   **Publication bias** occurs when the publication of a study depends on the results. There is convincing evidence that studies reporting positive findings are much more likely to be published than negative or null-findings[@schmucker2014; @scherer2018; @rising2008]. This can be due to both the publisher, who knows that positive findings receive more citations than negative or null-findings or to the knowledge of the authors, that publishing negative or null-findings can be difficult and might not be worth the effort.
+
+-   **Selective non-reporting bias** occurs when results are reported for some outcomes or analyses, but not others, depending on the nature and direction of the results. In the full-text screening process this issue arose often and several studies were excluded because a comment as: "No significant change was observed for cholesterol or triglycerides" was reported instead of the nominal change. In **Paper II**, 13 studies were excluded because of insufficient statistics reported, and 254 studies were excluded because of insufficient lipid measurements.
+
+The issue of unavailable data is a serious limitation to studies of non-primary endpoints. In the case of **Paper II**, we estimate that approximately 270 studies that were not already included and had the correct study design was excluded because of missing data - either because change in lipids or lipoproteins were not measured as part of the study or because it was not reported in the published paper. This means that the data available for analysis is approximately 18% of the potential amount of data on change in lipids and lipoproteins in SGLT2-inhibitor randomized placebo-controlled trials.\
+In meta-analyses, Begg and Mazumdar´s rank test and funnel plots are usually used to investigate potential publication- and selective non-reporting bias. In **Paper II**, no indications of publication and selective non-reporting bias was found using these tests, however, knowing there is a possibility that only 18% of eligible data was included, these tests only serve to show that both positive and negative changes of lipids and lipoproteins were reported, not that there were no publication- or selective non-reporting bias (henvisning til statistik-afsnit. Eller flyt?)
 
 # National registries
 
-## The Danish Civil Register
+Endpoint data for the Copenhagen studies was collected using the national Danish Patient Registry and the Danish Registry of Causes of Death. The Danish Civil Registration System enabled individual-level data from the Copenhagen studies and the registries to be linked. Together these registries play a crucial role in facilitating epidemiological research in Denmark[@laugesen2023].\
+The UK Biobank links the collected data to electronic health records from general physicians and hospital inpatient records and death registries.
+
+## The Danish Civil Registration System
+
+The Danish Civil Registration System, established in 1968, serves as a comprehensive registry of personal information for all individuals residing in Denmark. Each person is assigned a unique personal identification number (CPR-number) at birth or immigration, identifying the person across public and private institutions in Denmark. The registry includes details such as name, gender, date and place of birth, residence, citizenship, vital status, and CPR-numbers of parents and spouses[@pedersen2011]. This registry is regularly updated and serves as a crucial tool for linking individual-level information on vital status and disease occurrence across various national Danish registers[@schmidt2014].
 
 ## The National Danish Patient Registry
 
+The National Danish Patient Registry, established in 1977, is one of the oldest nationwide hospital registries and contains information on all hospital admissions in Denmark. From 1995 the coverage of the registry was expanded to also include outpatient and emergency room activities, and from 2003 also admissions to private hospitals and outpatient visits at public hospitals. The registry provides information such as dates of hospital admission and discharge, clinical data including diagnoses and surgical procedures. Diagnoses are classified according to the International Classification of Diseases, with ICD8 used until 1993 and ICD10 from 1994 onwards. During a hospital admission, the main disease for which the person is admitted is recorded as the primary diagnosis, while other concomitant diseases are recorded as secondary diagnoses[@schmidt2015].
+
 ## The Danish Registry of Causes of Death
 
-## UK registers
+The Danish Registry of Causes of Death, established in 1970, contains data on the date and cause(s) of death for all deaths in Denmark. The registry adheres to ICD8 until 1993 and ICD10 from 1994 onwards. Physicians record both the primary cause of death and any contributory causes[@helweg-larsen2011].
 
-## Finnish registers
+## UK Biobank electronic health records
+
+Electronic health records in the UK Biobank comes from primary care records and inpatient hospital records.
+
+Primary care data is collected through various data suppliers and other intermediaries, including the main primary care computer system suppliers in England to collect primary care data for participants in the UK Biobank participants, who have provided written consent for linkage to health records. Primary care daa is currently available for approximately 45% of the UK Biobank cohort (\~230,000 participants). Only to data recorded by health care professionals working at general practices is included in the primary care data in the UK Biobank[@ukbioba2019].
+
+Inpatient hospital admissions data for England, Wales, and Scotland is provided to UK Biobank by different services managed by local subdivisions of the NHS. The data structures for England, Wales and Scotland are different because of differences in data collection, organizing, validation. In all three countries admitted patients are assigned one main (primary) code as well as a variable number of secondary codes. Differences in data structure between countries may lead to variation in the likelihood of non-primary conditions being coded and to differences in how hospital admissions are coded in the three countries All of the current UK Biobank linked English and Welsh hospital data are coded in ICD-10, but as data collection began earlier in Scotland (in 1981), the earlier Scottish data (before 1997) is coded in ICD-9[@ukbioba2023a]. For **Paper I** only inpatient hospital data was used to define the endpoints.
+
+## UK Biobank death registries
+
+Mortality data in the UK Biobank is currently received from NHS England for participants in England & Wales and from the NHS Central Register (NHSCR), part of the National Records of Scotland, for participants in Scotland, and is updated quarterly. Death registry data includes date of death and the primary and contributory causes of death, coded using the ICD-10 system[@ukbioba2023; @mortalit]
+
+## FinnGen registers
+
+FinnGen registry data used in **Paper 1** was collected and processed from the following different national health registers: hospital and outpatient visits in HILMO, (ICD-8, ICD-9 and ICD-10), AvoHILMO, a primary health care register (primary and secondary diagnoses using ICD-10), Cause of Death register (containing information on immediate, underlying and contributing causes of death using ICD-8, ICD-9 and ICD-10 codes) and reimbursed medication entitlements and prescribed medicine purchases[@kurki2023].
+
+# Selection and genotyping of genetic variants
+
+For **Paper I**, we examined different single nucleotide polymorphisms (SNPs) in the *SLC5A2* gene, encoding SGLT2, to test the hypothesis that genetic variation in *SLC5A2* mimics pharmacological SGLT2-inhibition with the initial aim of generating a polygenic risk score.\
+Participants in The Copenhagen City Heart Study and the Copenhagen Generel Population Study were genotyped for a total of 5 SNPs in or in proximity to *SLC5A2* located on chromosome 16 @fig-slc5a2. These were selected from Ensembl (ensembl.org), The Online Mendelian Inheritance in Man (OMIM), the Human Gene Mutation database (HGMD), genome wide association studies (the Meta-Analyses of Glucose and Insulin-related traits consortium (MAGIC) and DIAbetes Genetics Replication And Meta-analysis Consortium(DIAGRAM)), and available literature, based on minor allele frequency\>0.01, no linkage disequilibrium(r^2^\<0.004 for all combinations), and/or association with glycemic traits and/or glucosuria[@ordelheide2017; @zimdahl2017; @enigk2011; @drexel2019; @calado2004].
+
+![The 5 SNPs genotyped in the Copenhagen City Heart Study and the Copenhagen General Population Study](slc5a2.png){#fig-slc5a2}
+
+More than 80 genetic variants in *SLC5A2* were described to cause or possibly cause familial renal glucosuria in OMIM, HGMD, and available literature. Of these, seven variants were reported both in OMIM, HGMD, and in the literature. Six of these seven variants were with minor allele frequencies below 0.001 in European reference populations. Rs61742739 was the most common variant with a minor allele frequency of 0.01 and also the variant most frequently reported in the literature to be associated with familial renal glucosuria^21-25^. We therefore selected this variant for **Paper I**. None of the rare variants (minor allele frequency\<0.001) were genotyped in the Copenhagen City Heart Study and in the Copenhagen General Population Study, since we do not have a sufficient number of individuals in these cohorts to identify sufficient number of carriers for reliable statistical analyses; likewise, none of these were genotyped in the UK Biobank or in FinnGen.\
+Familial renal glucosuria is a phenotype that resembles the effect of pharmacological SGLT2-inhibition. The minor allele G of rs61742739 alters the amino acid sequence, substituting aspargine with serine in position 654 of the SGLT2 protein^2^. This substitution is in a highly conserved position of the SGLT2 protein, indicating that this part of the protein is functionally important.\
+In the Copenhagen City Heart Study and the Copenhagen General Population Study genotyping of the genetic variants was done by TaqMan allelic discrimination assays using an ABI PRISM 7900HT Sequence Detection System (Applied Biosystems Inc., Foster City, CA) and were called using a 7600HT TaqMan system from Applied Biosystems and subsequently verified manually by a lab technician. The TaqMan genotyping method is a polymerase chain-reaction (PCR)-based technique. Similar to conventional PCR methods, two primers that bind to the regions flanking the target DNA sequence during the PCR cycle are added to the DNA sample. With the assistance of a DNA polymerase, the DNA sequence of interest is replicated according to the binding of the primers. Two probes consisting of allele specific nucleotide sequences corresponding to the wildtype and minor allele of the target DNA sequence are included in the assay. Each probe is labeled with a distinct fluorescent dye at the 5' end and a fluorescent quencher at the 3' end. The quencher prevents fluorescence emission from the probe. Throughout the PCR cycle, the probe anneals to the DNA sequence, and as the DNA polymerase replicates the DNA, it cleaves the probe, releaseing the fluorescent dye from the quencher, which results in fluorescence from the attached reporter dye. The wildtype and mutant alleles are associated with different fluorescent signals, allowing for the determination of the genotype based on the relative signal emitted by the cleaved probes at the end of the PCR cycle. Homozygous samples emit only one color, whereas heterozygous samples emit colors of both the wildtype and the minor allele[@essentia]. All 5 genotyped variants were in Hardy Weinberg equilibrium, supporting a low level of genotyping errors.
+
+In the UK biobank and FinnGen genotyping was done by Affymetrix/ThermoFisher Axiom custom arrays[@bycroft2018; @kurki2023].
+
+# Potential mediators - covariates
+
+In the Copenhagen City Heart Study and the Copenhagen General Population Study, participants completed a questionnaire, underwent physical examination, and had blood samples drawn for biochemical analyses and DNA samples. In the UK biobank the process was similar, also involving a questionnaire, physical examination, and blood samples, although methods of data collection differed.\
+In this section, the measurements used for the analyses in **Paper I** are described.
+
+## The Copenhagen City Heart Study and the Copenhagen General Population Study
+
+### Self-administered questionnaire
+
+Self-reported variables smoking (never, former, current) and physical activity (low, moderate, high) were used as covariates in **Paper I**. The variables history of diabetes mellitus, glucose-lowering drug use, and antihypertensive drug use were used together with ICD codes to define the categorical covariates diabetes mellitus and hypertension. hf, ami, ihd, stroke?\
+Using self-reported information on disease comes with the risk of recall bias, which occurs when the participant does not accurately recall a certain event. Diabetes and hypertension variables were only used for exploratory analyses, and recall bias is not likely to affect the results of **Paper I**.
+
+### Physical examination
+
+Body weight, height, systolic and diastolic blood pressure, were measured by trained technicians during the physical examination and were investigated as potential mediators of the effect of SGLT2 genetic variation on risk of cardiovascular disease and mortality in **Paper I**.
+
+### Biochemical analyses
+
+Participants in the Copenhagen City Heart Study and the Copenhagen General Population Study had blood samples drawn at the day of attendance at a random timepoint since last meal. Non-fasting plasma glucose was measured by colorimetric assays (Konelab, Thermo Fischer Scientific). Plasma creatinine, sodium, and potassium were measured using standard hospital assays (Konelab, Thermo Fisher Scientific). Blood hematocrit was measured using a flow cytometer‐based hematology analyzer (ADVIA^TM^120, Siemens). Plasma total cholesterol, high-density lipoprotein cholesterol, and triglycerides were measured by direct enzymatic methods (Thermo Fisher Scientific/Konelab). Plasma low-density lipoprotein (LDL)-cholesterol was calculated using the Friedewald equation if plasma triglyceride levels were ≤4.0 mmol/L, and otherwise measured using a direct assay; plasma high-density lipoprotein (HDL)-cholesterol, triglycerides, and total cholesterol were measured by direct enzymatic methods (Konelab, Thermo Fisher Scientific). Lipoprotein(a) was measured using assays from DiaSys (Diagnostic Systems) and Denka Seiken and subsequently adjusted for assay differences. Sampling, measurements, handling, and storage of the samples were done with minimal variation over the years to ensure that results were comparable across time. Internal (daily) and external (ten times a year) quality control to ensure accuaracy and repoducibility for all biochemical analyses were carried out continuously over the years.
+
+## The UK Biobank
+
+Plasma glucose levels were determined using hexokinase analysis on the Beckman Coulter AU5800 system. Hemoglobin A1c levels were measured by HPLC analysis using the Bio-Rad VARIANT II Turbo instrument. Weight and height measurements were obtained during the initial Assessment Centre visit using various methods, along with systolic and diastolic blood pressure. Plasma creatinine levels were determined using enzymatic analysis on the Beckman Coulter AU5800 system. Blood hematocrit was calculated as the relative volume of packed erythrocytes to whole blood using the formula: (red blood cells x mean corpuscular volume) / 10 on the Beckman Coulter LH750 analyzer. LDL-cholesterol levels were measured using enzymatic protective selection analysis, HDL-cholesterol levels by enzyme immunoinhibition analysis, and triglyceride levels by GPO-POD analysis, all performed on the Beckman Coulter AU5800 system. Lipoprotein(a) levels were measured using immunoturbidimetric analysis on the Randox AU5800 system. Plasma sodium and potassium measurements were not available in our UK Biobank data.\
+To ensure the reliability and accuracy of serum biomarker data, performance and quality control procedures were followed. For each biomarker, participant samples were analyzed alongside Internal Quality Control (IQC) samples of known concentrations (high, medium, and low). Participant results were considered valid if both the opening and closing IQC results fell within the predetermined control limits for the analytical process. Third-party IQC materials were employed for each assay to provide an unbiased assessment of the overall analytical system's performance
+
+## Risk of bias and limitations in covariates
+
+Measurement error (continious variables) or misclassification (categorical variables) has the potential to jeopardize the validity of epidemiological and clinical studies, and may also affect the results of **Paper I**. This risk is the smallest for exposures and outcomes where measurements happen in a controlled environment, for example biochemical analyses or genotyping undergoing regular quality control, and the largest for exposures and outcomes that are more difficult to measure or validate, for example self-reported parameters as smoking and alcohol-intake (that are also potentially affected by a social desirability bias, which occurs when participants report lower rates of health hazardous behaviour to be perceived as more socially acceptable). Measurement error has the potential to both under- and overestimate the true association between exposure and outcome, and measurement error in confounders or covariates complicate the relationship further, because of an incomplete adjustment [@groenwold2020]. In **Paper 1**, the exposure variable in the genetic analyses is the *SLC5A2* genotype, where we expect a low rate of misclassification, based on the SNP meeting Hardy Weinberg expectations in the Copenhagen City Heart Study and Copenhagen General Population Study, and the UK biobank. The only covariates used in the genetic analyses for risk estimation and sex, which are not prone to misclassification, as these are matched with the the Danish Civil Registration system.\
+For observational and mediation analyses, measurement error in the potential mediators might affect the results, however, we expect potential measurement error to be non-differential, meaning that it is not related to the exposure (genotype)[@ioannidis2008].
+
+collider bias?
+
+# Study endpoints
+
+An overview of the World Health Organization's International Classification of Diseases codes, KELA reimbursement codes and ATC codes for medicine purchases used to define endpoints in **Paper I** can be found in @tbl-icd.
+
+## Copenhagen City Heart Study and the Copenhagen General population study
+
+Endpoints were defined according to the World Health Organization's International Classification of Diseases codes, and were heart failure, including all subtypes of heart failure, myocardial infarction, ischaemic heart disease, ischaemic stroke, cardiovascular mortality (primary cause of death: heart failure, myocardial infarction, ischaemic heart disease, ischaemic stroke, or peripheral arterial disease), and all-cause mortality, and were collected from January 1^st^ 1977, through December 13^th^ 2018, by reviewing diagnoses from all hospital admissions and outpatient visits in the national Danish Patient Registry[@schmidt2015] and the national Danish Registry of Causes of Death [@helweg-larsen2011], and any deaths from the national Danish Civil Registration system[@pedersen2011].
+
+## UK Biobank
+
+Endpoints were defined according to the World Health Organization's International Classification of Diseases codes and were heart failure including all subtypes of heart failure), myocardial infarction, and ischaemic heart disease, ischaemic stroke, and cardiovascular mortality (primary cause of death: heart failure, myocardial infarction, ischaemic heart disease, ischaemic stroke, or peripheral arterial disease) Diagnoses were collected from the Hospital Inpatient Data field, which links to inpatient hospital data registries from England, Wales, and Scotland. The latest update of the diagnoses for heart failure, myocardial infarction, and ischaemic heart disease from the Hospital Inpatient Data field was September 30, 2021. The latest update for all-cause mortality was November 12, 2021.
+
+## FinnGen
+
+Information on endpoints was obtained from publicly available summary data, downloaded on March 17, 2023, and endpoints were defined according to the World Health Organization's International Classification of Diseases codes, KELA reimbursement codes, and ATC codes for medicine purchases. Endpoints were heart failure (I9_HEARTFAIL_ALLCAUSE, including all subtypes of heart failure, myocardial infarction (19_MI_STRICT), and ischemic heart disease (I9_IHD), embolic stroke (I9_STR_EMBOLIC), cardiovascular mortality (I9_K_CARDIAC), and all-cause mortality (DEATH)[@risteys].
+
+\pagebreak
+
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+|                              | The Copenhagen City Heart Study and the Copenhagen General Population Study | The UK Biobank                                                  | FinnGen                                                                    |
++==============================+=============================================================================+=================================================================+============================================================================+
+| **Heart failure**            | ICD8: 427.09-427.11                                                         | ICD9: 428.0-428.4, 4989                                         | ICD8 427.00, 427.10, 428, 782.4                                            |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              | ICD10: I50.0-I50.9                                                          | ICD10: I50.0-I50.9                                              | ICD9: 402.9B, 428                                                          |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ICD10: I11.0, I13.0, I13.2, I50.0                                          |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | KELA code: 201                                                             |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ATC codes: C03CA01, C03EB01                                                |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+| **Myocardial infarction**    | ICD8: 410                                                                   | ICD9: 410.9                                                     | ICD8: 410                                                                  |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              | ICD10: I21-I22                                                              | ICD10: I21-I22                                                  | ICD9: 410                                                                  |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ICD10: I21-I22                                                             |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+| **Ischemic heart disease**   | ICD8: 410-414                                                               | ICD9: 410.9, 412, 413.9, 414.0 - 414.4                          | ICD8: 410-414, 798                                                         |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              | ICD10: I20-I25                                                              | ICD10: I20-I25                                                  | ICD9: 410-414, 798                                                         |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ICD10: I20-I25, I46, R96, R98                                              |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | KELA code: 206                                                             |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+| **Ischemic stroke**          | ICD8: 410-414                                                               | ICD9: 434                                                       | ICD8: 434, 434.99                                                          |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              | ICD10: I20-I25                                                              | ICD10: I63                                                      | ICD9: 434.1A                                                               |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ICD10: I63.1                                                               |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+| **Cardiovascular mortality** | Death from:                                                                 | Death from:                                                     | Death from:                                                                |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              | ICD8: 410-414, 427.09-427.11, 433-434, 440, 443.99, 445                     | ICD9: 410-414, 428, 434, 440, 443\                              | ICD8: 394.0-394.2, 798-799                                                 |
+|                              |                                                                             | \                                                               |                                                                            |
+|                              | ICD10: I50.0-I50.9, I20-I25, I63, I70, I739, E115, E105, 145                | ICD10: I50.0-I50.9,  I20-I25, I63, I70, I739, E115, E105, E145) | ICD9: 394.0-394.2, 798-799                                                 |
+|                              |                                                                             |                                                                 |                                                                            |
+|                              |                                                                             |                                                                 | ICD10: I00-I02, I05-I09, I10-I15, I20-I25, I26-I28, I30-I52, R96, R98, R99 |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+| **All-cause mortality**      | Death from all causes                                                       | Death from all causes                                           | Death from all causes                                                      |
++------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------+
+
+: Table of World Health Organization's International Classification of Diseases codes, KELA reimbursement codes, and ATC codes for the endpoints included in **Paper I**. {#tbl-icd}
+
+## Strengths and limitations of the study endpoints
+
+Misclassification of diagnoses used to create the endpoints might influence the results in **Paper I**. Misclassification occurs when an individual is put in the wrong group, for example if a patient with heart failure does not receive a health record heart failure diagnosis, or if a healthy individual erroneously receives a diagnosis. Misclassification can be a major issue in epidemiological research, however, most of the endpoints defined in **Paper I** are generally viewed as "hard" endpoints, meaning that is unlikely that a myocardial infarction or a stroke patient is not seen in a hospital setting, or that a dead person is not registered as dead. Diagnoses related to heart failure and ischemic heart disease are more likely to be misclassified because of underestimation, as it is more common to be followed for these in a general practice setting, particularly in the early stages of the diseases. Hard endpoints or not, there is a substantial risk of bias in studies that rely on a diagnosis of heart disease in a population that includes both male and female participants, since cardiovascular disease remain under-recognized, underdiagnosed, and undertreated in women compared to men[@vogel2021; @burgess2022]. This may lead to underestimation of the risk of heart failure in the population.
+
+As diagnoses in the Danish registries are used to define the endpoints, the validity of the register data is important. In validation studies of the national Danish Patient Registry, the positive predictive value (PPV) for heart failure was between 83.6% and 95.2% with the highest value for diagnoses given at a cardiology department[@delekta2018], for myocardial infarction it has been reported to be 97%[@sundbøll2016], whereas other ischemic heart diseases are reported to have lower PPVs (46-62% for angina pectoris and 87-96% for acute coronary syndrome including unstable angina and myocardial infarction) or have not been validated[@bork2017]. The validity of ischemic stroke diagnoses is also high with reported PPVs between 88% and 97%, however, it is expected that many ischemic strokes have been misclassified as other stroke types or as unspecified stroke [@krarup2007; @johnsen2002], which may lead to underestimation of the true association.\
+In general, diagnoses with lower PPVs should be used with caution in epidemiological studies, if validation is not feasible.\
+The Danish Civil Registration System provides highly valid all-cause mortality outcomes, as every death in Denmark is confirmed by a medical doctor, and the registry is updated on a daily basis. However, the validity of cause-specific mortality based on diagnoses from the national Danish Registry of Causes of Death is less reliable. This is thought to be because of changes in the registration of death certificates over the years, lack of regular validation of causes and autopsy rates below 10%[@helweg-larsen2011]. It is expected that there may be misclassification of some cardiovascular deaths, that may lead to either over- or underestimation of the true association.\
+Although the point of the World Health Organization's International Classification of Diseases codes is a uniform way to report disease worldwide, it is expected that there may be regional differences in how diagnoses and deaths are registered, limiting the comparability between studies from different countries.
+
+## Meta-analysis endpoints?
 
 # Study designs
 
-## Genetic variation as proxy for drug effects
+## Paper I: Genetic variation as proxy for drug effects
+
+Drug effects can be explored by investigating the natural genetic variation in their targets, a method closely linked to the theoretically similar method of Mendelian randomization. Both methods are based on the same idea of using genetic variation as a proxy for a certain exposure to measure an unconfounded effect on an outcome. Advantages of these genetic approaches include the absence of reverse causation, which is otherwise a considerable limitation in observational epidemiology, and the ability to predict long-term effects of treatment directly in humans[@stender2016].
+
+![The principle of Mendelian randomization (right) in comparison to a randomized controlled trial (left) that form the basis of the study of drug effects using genetic variants.](randomization.png){#fig-randomization}
 
 ### Establishing causality
 
-## Meta-analysis to aggregate RCT data
+## Paper II: Meta-analysis to aggregate RCT data
 
 # Statistical analysis
+
+multiple testing[@george2016; @ioannidis2008]
+
+significance testing
 
 ## Observational
 
@@ -92,5 +275,5 @@ Genotyping in the CCHS and CGPS (by TaqMan), quality control, and accuracy is de
 ## Calculating power and estimating sample size
 
 An important consideration when designing a study, is including a sufficient sample size in order to test the hypothesis. Failing to do this may lead to type 1 (false positive or rejecting a null hypothesis that is in fact true) or type 2 error (false negative or failing to reject a null hypothesis that is in fact false) (FIGURE?) [@jones2003].\
-\
-\\newpage
+
+\pagebreak

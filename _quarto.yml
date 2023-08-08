@@ -7,6 +7,8 @@ book:
   date: "1.5.2023"
   chapters:
     - index.qmd
+    - summary_in_english.qmd
+    - resume_dansk.qmd
     - intro.qmd
     - part1_sglt2_review.qmd
     - part2_methods.qmd
