@@ -1,0 +1,7 @@
+---
+title: "Part 3: Original publications included"
+---
+
+**Bechmann LE**, Emanuelsson F, Nordestgaard BG, Benn M. Genetic variation in SLC5A2 mimicking SGLT2-inhibition and risk of cardiovascular disease and all-cause mortality: reduced risk not explained by lower plasma glucose. Cardiovasc Res. 2023 Jul 30:cvad122. doi: 10.1093/cvr/cvad122. Online ahead of print.
+
+**Bechmann LE**, Emanuelsson F, Nordestgaard BG, Benn M. SGLT2-inhibition increases total, LDL, and HDL cholesterol and lowers triglycerides: Meta-analyses of 60 randomized trials, overall and by dose, ethnicity, and drug type. Atherosclerosis. 2023 Aug 9:117236. doi: 10.1016/j.atherosclerosis.2023.117236. Online ahead of print.

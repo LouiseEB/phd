@@ -62,9 +62,9 @@ ggplot()+
   annotate("text", x= 0.05, y =23, label = "N, treatment", fontface = "bold", hjust = 0.7)+
   annotate("text", x= 0.35, y =23, label = "N, placebo", fontface = "bold", hjust = 0.7)+
   annotate("text", x = 0, y = 22, label = "Total", fontface = "bold", hjust = 1.2)+
-  annotate("text", x = 0.1, y = 22, label = "Event", fontface = "bold", hjust = 0.85)+
+  annotate("text", x = 0.1, y = 22, label = "Events", fontface = "bold", hjust = 0.77)+
   annotate("text", x = 0.3, y = 22, label = "Total", fontface = "bold", hjust = 1.2)+
-  annotate("text", x = 0.4, y = 22, label = "Event", fontface = "bold", hjust = 0.85)+
+  annotate("text", x = 0.4, y = 22, label = "Events", fontface = "bold", hjust = 0.77)+
   annotate("text", x = 1.3, y = 22, label = "Weight (%)", fontface = "bold", hjust = 0.8)+
   annotate("text", x = 1.67, y = 22, label = "HR (95% CI)", fontface = "bold", hjust = 1.1)+
   geom_point(data = filter(data, study != "Fixed effects model"), aes(x = hr, y =row))+
@@ -87,7 +87,7 @@ ggplot()+
                fill = "#E69F00",
                inherit.aes = FALSE
   )+
-  xlab("Hazard ratio (95% confidence interval")+
+  xlab("Hazard ratio (95% confidence interval)")+
   scale_x_continuous(breaks= c(0.6, 0.8, 1, 1.2))+
   theme_classic()+
   theme(

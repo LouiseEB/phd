@@ -1,0 +1,13 @@
+---
+title: "Summary in English{.unnumbered}"
+---
+
+Sodium glucose co-transporter 2 (SGLT2) inhibitors were developed as treatment for type 2 diabetes and became available on the market in the early 2010s. In 2015, the first results were published showing that, surprisingly, in addition to lowering blood glucose levels, SGLT2 inhibitor treatment also reduced the risk of hospitalization for heart failure, major cardiovascular events, and even mortality. However, the mechanism behind was unclear.\
+Glucose, low-density lipoprotein (LDL) cholesterol, and triglyceride-rich lipoproteins, have all been shown to be involved in development of cardiovascular disease, but the question, whether the beneficial effects of SGLT2-inhibition on cardiovascular disease and mortality might be mediated through changes in these, was unresolved.
+
+We hypothesized **1)** that a functional genetic variant in solute carrier family 5 member 2 (*SLC5A2*), known to be associated with familial renal glucosuria, would mimic pharmacological SGLT2 inhibition, and thereby provide an opportunity to examine potential mediators of the effects on lower risk of cardiovascular disease and mortality in three different cohorts. We found that carriers of the rare allele had lower risks of heart failure, myocardial infarction, ischemic heart disease and all-cause mortality in the general population and that the effects were at most minimally mediated through a lower plasma glucose.\
+We hypothesized **2)** that treatment with SGLT2 inhibitors affected levels of lipids and lipoproteins. We designed a meta-analysis and included all available randomized placebo-controlled trials of SGLT2 inhibitors and stratified the analyses by treatment dose, non-Asian/Asian ethnicity, and by type of SGLT2 inhibitor. We found that SGLT2 inhibition modestly increased total, LDL, and high-density lipoprotein (HDL) cholesterol and modestly lowered triglycerides.
+
+Our findings suggest that the mechanistic path behind the lower risks of cardiovascular disease and mortality, seen with SGLT2 inhibition, is not through alterations in plasma glucose, nor changes in lipid and lipoprotein levels, as we found that lower plasma glucose only mediated a very small proportion of the lower risks and that changes in lipids and lipoproteins were modest and with limited clinical relevance. Our explorations are important to elucidate the effects of SGLT2 inhibitor treatment; however, further studies are warranted for a full mechanistic understanding of the association between SGLT2 inhibitor treatment and lower risk of cardiovascular disease and mortality.
+
+\newpage

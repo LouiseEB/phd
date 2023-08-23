@@ -14,6 +14,7 @@ book:
     - part2_methods.qmd
     - summary.qmd
     - references.qmd
+    - Part3 original publications.qmd
 
 bibliography: references.bib
 csl: vancouver-imperial-college-london.csl

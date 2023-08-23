@@ -3,11 +3,15 @@ title: "Preface {.unnumbered}"
 file: "index.qmd"
 ---
 
-At an early stage in my medical career, I became interested in the pathogenesis of metabolic diseases. This interest was only strengthened in my encounter with clinical endocrinology and cardiology, where my theoretical and basic science knowledge was put into a patient-oriented context highlighting new perspectives. When I started this project, SGLT2-inhibitors were still a relatively new drug class and many questions remain unanswered as to which mechanisms could explain their beneficial effect on type 2 diabetes but also cardiovascular disease and mortality. Being a largely unexplored field, the interplay between metabolism, diabetes, and cardiovascular disease drew me in.\
-This thesis is written as a framework around two studies on SGLT2-inhibition performed during my employment as PhD student at Rigshospitalet and Herlev Hospital, Copenhagen University Hospitals, Denmark, between 2019 and 2023.\
+**Bechmann LE**, Emanuelsson F, Nordestgaard BG, Benn M. Genetic variation in SLC5A2 mimicking SGLT2-inhibition and risk of cardiovascular disease and all-cause mortality: reduced risk not explained by lower plasma glucose. Cardiovasc Res. 2023 Jul 30:cvad122. doi: 10.1093/cvr/cvad122. Online ahead of print.
+
+**Bechmann LE**, Emanuelsson F, Nordestgaard BG, Benn M. SGLT2-inhibition increases total, LDL, and HDL cholesterol and lowers triglycerides: Meta-analyses of 60 randomized trials, overall and by dose, ethnicity, and drug type. Atherosclerosis. 2023 Aug 9:117236. doi: 10.1016/j.atherosclerosis.2023.117236. Online ahead of print.
+
+At an early stage in my medical career, I became interested in the pathogenesis of metabolic diseases. This interest was only strengthened in my encounter with clinical endocrinology and cardiology, where my theoretical and basic science knowledge was put into a patient-oriented context, highlighting new perspectives. When I started this project, sodium glucose co-transporter 2 (SGLT2) inhibitors were still a relatively new drug class and many questions remained unanswered as to which mechanisms could explain their beneficial effect on type 2 diabetes, but also cardiovascular disease and mortality. Being a largely unexplored field, the interplay between metabolism, diabetes, and cardiovascular disease drew me in.\
+This thesis is written as a framework around two studies on SGLT2 inhibition performed during my employment as a PhD student at Rigshospitalet and Herlev Hospital, Copenhagen University Hospitals, Denmark, between 2019 and 2023.\
 I would like to thank all of my supervisors for giving me the opportunity and necessary support to do this work, and for teaching me valuable lessons in scientific research.\
-I would also like to extend my gratitude towards the participants and staff of the Copenhagen City Heart Study and the Copenhagen General Population Study without whom this project would not have been possible. A special thanks to the laboratory technicians at Rigshospitalet, who taught me genotyping methods.\
-The studies were funded by th Danish Council for Independent Research (Funding number: 9039-00026B).
+I would also like to extend my gratitude towards the participants and staff of the Copenhagen City Heart Study and the Copenhagen General Population Study without whom this project would not have been possible. A special thanks to the laboratory technicians at Rigshospitalet who taught me genotyping methods.\
+The studies were funded by the Danish Council for Independent Research (Funding number: 9039-00026B).
 
 *Louise Ellegaard Bechmann*
 
